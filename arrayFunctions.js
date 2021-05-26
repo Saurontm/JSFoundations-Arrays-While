@@ -9,7 +9,7 @@
  * isArrayLengthOdd([1, 2, 3, 4]) -> flase
  */
 function isArrayLengthOdd(numbers) {
-  // Your code here
+  return ((numbers.length)%2===1);
 }
 
 /**
@@ -24,6 +24,7 @@ function isArrayLengthOdd(numbers) {
  */
 function isArrayLengthEven(numbers) {
   // Your code here
+  return ((numbers.length)%2===0);
 }
 
 /**
@@ -36,6 +37,8 @@ function isArrayLengthEven(numbers) {
  */
 function addLailaToArray(instructors) {
   // Your code here
+  instructors.push("Laila")
+  return (instructors);
 }
 
 /**
@@ -48,6 +51,7 @@ function addLailaToArray(instructors) {
  */
 function eliminateTeam(teams) {
   // Your code here
+  return (teams.pop());
 }
 
 /**
@@ -62,6 +66,12 @@ function eliminateTeam(teams) {
  */
 function secondHalfOfArrayIfItIsEven(fruits) {
   // Your code here
+  if (isArrayLengthEven(fruits)){
+    return (fruits.slice((fruits.length)/2,fruits.length));
+  } else{
+    return ([]);
+  }
+  
 }
 
 /**
@@ -80,6 +90,12 @@ function secondHalfOfArrayIfItIsEven(fruits) {
  */
 function youGottaCalmDown(shout) {
   // Your code here
+  for (let i = 1; i < shout.length; i++){
+    if (shout.slice(0,i).endsWith('!')){
+      return (shout.slice(0,i));
+    }
+  }
+  return shout;
 }
 
 module.exports = {
